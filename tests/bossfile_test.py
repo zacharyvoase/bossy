@@ -1,5 +1,5 @@
-from boss.bossfile import Bossfile
-from boss.commands import Command
+from bossy.bossfile import Bossfile
+from bossy.commands import Command
 
 
 def make_bossfile_mod():

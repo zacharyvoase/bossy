@@ -1,5 +1,5 @@
-from boss import loader
-from boss.commands import Command
+from bossy import loader
+from bossy.commands import Command
 
 
 class Bossfile(object):

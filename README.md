@@ -1,6 +1,6 @@
-# Boss
+# Bossy
 
-Boss is a tool for writing and running shell commands in Python.
+Bossy is a tool for writing and running shell commands in Python.
 
 
 ## Example
@@ -8,7 +8,7 @@ Boss is a tool for writing and running shell commands in Python.
 Create a file called 'Bossfile' in the current directory with these contents:
 
 ```python
-from boss import *
+from bossy import *
 
 @command
 def hello():
@@ -21,18 +21,18 @@ def hello_n(repetitions):
         print "Hello, World!"
 ```
 
-Run your commands via the `boss` executable:
+Run your commands via the `bossy` executable:
 
 ```bash
-$ boss --help
-usage: boss [-h|-v|-f BOSSFILE] <command> ...
+$ bossy --help
+usage: bossy [-h|-v|-f BOSSFILE] <command> ...
 
 Run commands from a Bossfile.
 
 global options:
   -f BOSSFILE, --file BOSSFILE
                         Location of an alternative Bossfile to use. By
-                        default, boss will look for a file called 'Bossfile'
+                        default, bossy will look for a file called 'Bossfile'
                         in the current directory.
   --pdb                 Launch the Python Debugger on uncaught exceptions.
   -v, --version         show program's version number and exit
@@ -43,11 +43,11 @@ sub-commands:
     hello_n             Print something to the console several times.
     hello               Print something to the console.
 
-$ boss hello
+$ bossy hello
 Hello, World!
 
-$ boss hello_n -h
-usage: boss hello_n [-h] [-r REPETITIONS]
+$ bossy hello_n -h
+usage: bossy hello_n [-h] [-r REPETITIONS]
 
 Print something to the console several times.
 
@@ -56,7 +56,7 @@ optional arguments:
   -r REPETITIONS, --repetitions REPETITIONS
                         Number of times to print
 
-$ boss hello_n -r 3
+$ bossy hello_n -r 3
 Hello, World!
 Hello, World!
 Hello, World!

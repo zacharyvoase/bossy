@@ -1,4 +1,4 @@
-from boss.commands import Command, command, argument
+from bossy.commands import Command, command, argument
 
 
 def test_calling_a_Command_calls_its_function():

@@ -5,7 +5,7 @@ import traceback
 
 import pkg_resources
 
-from boss.bossfile import Bossfile
+from bossy.bossfile import Bossfile
 
 
 def get_version(pkg_name):
@@ -14,21 +14,21 @@ def get_version(pkg_name):
 
 
 parser = argparse.ArgumentParser(
-    prog='boss',
+    prog='bossy',
     description="Run commands from a Bossfile.",
-    usage='boss [-h|-v|-f BOSSFILE] <command> ...',
+    usage='bossy [-h|-v|-f BOSSFILE] <command> ...',
     add_help=False)
 global_opts = parser.add_argument_group('global options')
 global_opts.add_argument('-f', '--file', metavar='BOSSFILE',
                          default='Bossfile',
                          help="Location of an alternative Bossfile to use. "
-                         "By default, boss will look for a file called "
+                         "By default, bossy will look for a file called "
                          "'Bossfile' in the current directory.")
 global_opts.add_argument('--pdb', action='store_true', default=False,
                          help="Launch the Python Debugger on uncaught "
                          "exceptions.")
 global_opts.add_argument('-v', '--version', action='version',
-                         version='boss ' + get_version('boss'))
+                         version='bossy ' + get_version('bossy'))
 
 
 def add_help(parser):

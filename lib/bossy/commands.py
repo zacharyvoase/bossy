@@ -1,6 +1,6 @@
 class Command(object):
 
-    """Wraps a Python function and exposes it as a Boss command."""
+    """Wraps a Python function and exposes it as a Bossy command."""
 
     def __init__(self, function, **opts):
         self.function = function
@@ -11,7 +11,7 @@ class Command(object):
         self.opts.setdefault('description', doc)
         self.opts.setdefault('help', (doc.lstrip('\r\n') or '\n').splitlines()[0])
 
-        self.opts.setdefault('prog', 'boss %s' % (self.name,))
+        self.opts.setdefault('prog', 'bossy %s' % (self.name,))
 
         self.arguments = getattr(function, 'arguments', [])
 
