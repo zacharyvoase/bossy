@@ -1,11 +1,9 @@
-====
-Boss
-====
+# Boss
 
 Boss is a tool for writing and running shell commands in Python.
 
-Example
-=======
+
+## Example
 
 Create a file called 'Bossfile' in the current directory with these contents:
 
@@ -65,8 +63,7 @@ Hello, World!
 ```
 
 
-(Un)license
-===========
+## (Un)license
 
 This is free and unencumbered software released into the public domain.
 
