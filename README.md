@@ -20,14 +20,43 @@ def hello():
 @argument('-r', '--repetitions', default=1, help="Number of times to print")
 def hello_n(repetitions):
     for i in xrange(repetitions):
-        print "Hello, World!")
+        print "Hello, World!"
 ```
 
 Run your commands via the `boss` executable:
 
 ```bash
+$ boss --help
+usage: boss [-h|-v|-f BOSSFILE] <command> ...
+
+Run commands from a Bossfile.
+
+global options:
+  -f BOSSFILE, --file BOSSFILE
+                        Location of an alternative Bossfile to use. By
+                        default, boss will look for a file called 'Bossfile'
+                        in the current directory.
+  --pdb                 Launch the Python Debugger on uncaught exceptions.
+  -v, --version         show program's version number and exit
+  -h, --help            show this help message and exit
+
+sub-commands:
+  <command>
+    hello_n             Print something to the console several times.
+    hello               Print something to the console.
+
 $ boss hello
 Hello, World!
+
+$ boss hello_n -h
+usage: boss hello_n [-h] [-r REPETITIONS]
+
+Print something to the console several times.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r REPETITIONS, --repetitions REPETITIONS
+                        Number of times to print
 
 $ boss hello_n -r 3
 Hello, World!
