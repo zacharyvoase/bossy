@@ -18,6 +18,11 @@ setup(
     url='http://github.com/zacharyvoase/boss',
     packages=find_packages(where='lib'),
     package_dir={'': 'lib'},
+    entry_points={
+        'console_scripts': [
+            'boss = boss.main:main',
+        ],
+    },
     install_requires=[
         'argparse>=1.2.1',
         'nose>=1.1.2',
