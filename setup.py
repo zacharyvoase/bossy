@@ -20,7 +20,7 @@ setup(
     package_dir={'': 'lib'},
     entry_points={
         'console_scripts': [
-            'boss = bossy.main:main',
+            'bossy = bossy.main:main',
         ],
     },
     install_requires=[
