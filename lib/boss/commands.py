@@ -9,7 +9,7 @@ class Command(object):
 
         doc = getattr(function, '__doc__', '') or ''
         self.opts.setdefault('description', doc)
-        self.opts.setdefault('help', (doc or '\n').splitlines()[0])
+        self.opts.setdefault('help', (doc.lstrip('\r\n') or '\n').splitlines()[0])
 
         self.opts.setdefault('prog', 'boss %s' % (self.name,))
 
