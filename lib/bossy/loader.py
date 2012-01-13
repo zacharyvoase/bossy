@@ -22,7 +22,7 @@ def load_module(name, filename, install=True):
 
     mod = types.ModuleType(name)
     mod.__file__ = filename
-    execfile(filename, globals(), mod.__dict__)
+    execfile(filename, vars(mod))
     if install:
         sys.modules[name] = mod
     return mod
